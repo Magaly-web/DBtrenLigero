@@ -1,0 +1,151 @@
+'use strict'//usar novedades de JS
+
+var mongoose = require('mongoose');//modulo de moongose
+var Schema = mongoose.Schema;//Schema carga moongoose.Schema esto permite definir nuevos esquemas
+
+var mmmeC06Schema = Schema({//esquema de la estructura que va a tener el formulario
+    date_created: String,
+    //datos tren
+    noInspeccion: String,
+    noTren: String,
+    kilometraje: String,
+    horaInicio: String,
+    horaTerminacion: String,
+    
+    operario: { type : Schema.ObjectId, ref: 'User'},
+
+    revisionUem1_1: Boolean,
+    revisionUem1_2: Boolean,
+    revisionUem1_3: Boolean,
+    revisionUem2_1: Boolean,
+    revisionUem2_2: Boolean,
+    revisionUem2_3: Boolean,
+    revisionUim1_1: Boolean,
+    revisionUim1_2: Boolean,
+    revisionUim1_3: Boolean,
+    revisionUim2_1: Boolean,
+    revisionUim2_2: Boolean,
+    revisionUim2_3: Boolean,
+    revisionTm1_1: Boolean,
+    revisionTm1_2: Boolean,
+    revisionTm1_3: Boolean,
+    revisionTm2_1: Boolean,
+    revisionTm2_2: Boolean,
+    revisionTm2_3: Boolean,
+    observacionesR: String,
+
+    limpiezaUem1_1: Boolean,
+    limpiezaUem1_2: Boolean,
+    limpiezaUem1_3: Boolean,
+    limpiezaUem2_1: Boolean,
+    limpiezaUem2_2: Boolean,
+    limpiezaUem2_3: Boolean,
+    limpiezaUim1_1: Boolean,
+    limpiezaUim1_2: Boolean,
+    limpiezaUim1_3: Boolean,
+    limpiezaUim2_1: Boolean,
+    limpiezaUim2_2: Boolean,
+    limpiezaUim2_3: Boolean,
+    limpiezaTm1_1: Boolean,
+    limpiezaTm1_2: Boolean,
+    limpiezaTm1_3: Boolean,
+    limpiezaTm2_1: Boolean,
+    limpiezaTm2_2: Boolean,
+    limpiezaTm2_3: Boolean,
+    observacionesL: String,
+
+    selladoUem1_1: Boolean,
+    selladoUem1_2: Boolean,
+    selladoUem1_3: Boolean,
+    selladoUem2_1: Boolean,
+    selladoUem2_2: Boolean,
+    selladoUem2_3: Boolean,
+    selladoUim1_1: Boolean,
+    selladoUim1_2: Boolean,
+    selladoUim1_3: Boolean,
+    selladoUim2_1: Boolean,
+    selladoUim2_2: Boolean,
+    selladoUim2_3: Boolean,
+    selladoTm1_1: Boolean,
+    selladoTm1_2: Boolean,
+    selladoTm1_3: Boolean,
+    selladoTm2_1: Boolean,
+    selladoTm2_2: Boolean,
+    selladoTm2_3: Boolean,
+    observacionesS: String,
+
+    aplicacionUem1_1: Boolean,
+    aplicacionUem1_2: Boolean,
+    aplicacionUem1_3: Boolean,
+    aplicacionUem2_1: Boolean,
+    aplicacionUem2_2: Boolean,
+    aplicacionUem2_3: Boolean,
+    observacionesA: String,
+
+    recuperacionUem1_1: Boolean,
+    recuperacionUem1_2: Boolean,
+    recuperacionUem1_3: Boolean,
+    recuperacionUem2_1: Boolean,
+    recuperacionUem2_2: Boolean,
+    recuperacionUem2_3: Boolean,
+    observacionesRec: String,
+
+    observaciones: String,
+    
+    //material utilizado
+    codigo1: String,
+    desc1: String,
+    cant1: String,
+    noVale1: Number,
+
+    codigo2: String,
+    desc2: String,
+    cant2: String,
+    noVale2: Number,
+    
+    codigo3: String,
+    desc3: String,
+    cant3: String,
+    noVale3: Number,
+
+    codigo4: String,
+    desc4: String,
+    cant4: String,
+    noVale4: Number,
+
+    codigo5: String,
+    desc5: String,
+    cant5: String,
+    noVale5: Number,
+    
+    codigo6: String,
+    desc6: String,
+    cant6: String,
+    noVale6: Number,
+    
+    codigo7: String,
+    desc7: String,
+    cant7: String, 
+    noVale7: Number,
+    
+    codigo8: String,
+    desc8: String,
+    cant8: String,
+    noVale8: Number,
+    
+    codigo9: String,
+    desc9: String,
+    cant9: String,
+    noVale9: Number,
+    
+    codigo10: String,
+    desc10: String,
+    cant10: String,
+    noVale10: Number,
+
+    superviso: { type : Schema.ObjectId, ref: 'User'},
+    jefeTurno: { type : Schema.ObjectId, ref: 'User'},
+    sMM: { type : Schema.ObjectId, ref: 'User'},
+    clave: String
+});
+module.exports = mongoose.model('mmmeC06', mmmeC06Schema);
